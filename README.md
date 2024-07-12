@@ -1,5 +1,10 @@
 ## Instructions
-You are going to build 3 control elements namely Checkbox, Radio and Toggle buttons with the help of this [Figma Link](https://www.figma.com/design/l5w29ECk9qAtHstP38wW36/Design-System-Template-(Community)?node-id=33435-530&t=ZFZJpb6DzjnakoU6-4).
+You are going to build 3 control elements namely Checkbox, Radio and Toggle buttons with the help of this [Figma Link](https://www.figma.com/community/file/1055785285964148921/design-system-template).
+
+Navigate to "Page: Controls" to view the control elements under "Select" section.
+
+<img width="750" alt="image" src="https://github.com/user-attachments/assets/7bd150b8-5f39-4f73-834c-7d4944875a1d">
+
 
 ## Expectations
 - Build the UI elements with accessibility in mind.
