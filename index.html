@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Elements</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h2>Agree to Terms</h2>
+    <div class="checkbox-container">
+      <input
+        type="checkbox"
+        id="terms-checkbox"
+        class="checkbox"
+        aria-label="Agree to terms and conditions"
+      />
+      <label for="terms-checkbox" class="checkmark"></label>
+      <label for="terms-checkbox">I agree to the terms and conditions</label>
+    </div>
+
+    <h2>Select Subscription Plan</h2>
+    <div class="radio-container">
+      <input
+        type="radio"
+        id="planBasic"
+        name="subscriptionPlan"
+        class="radio"
+        aria-label="Select Basic Plan"
+      />
+      <label for="planBasic" class="radiomark"></label>
+      <label for="planBasic">Basic Plan</label>
+    </div>
+    <div class="radio-container">
+      <input
+        type="radio"
+        id="planPremium"
+        name="subscriptionPlan"
+        class="radio"
+        aria-label="Select Premium Plan"
+      />
+      <label for="planPremium" class="radiomark"></label>
+      <label for="planPremium">Premium Plan</label>
+    </div>
+
+    <h2>Enable Notifications</h2>
+    <label class="switch" aria-label="Enable Notifications">
+      <input type="checkbox" checked />
+      <span class="slider round"></span>
+    </label>
+  </body>
+</html>
