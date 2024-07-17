@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    CHECKMARK
+    <div class="checkbox-container">
+      <input
+        type="checkbox"
+        id="custom-checkbox"
+        class="checkbox"
+        aria-label="Custom checkbox"
+      />
+      <label for="custom-checkbox" class="checkmark" id="checks"></label>
+    </div>
+    <br />
+    RADIO BUTTON
+    <div class="radio-container">
+      <input
+        type="radio"
+        id="customRadio1"
+        name="customRadio"
+        class="radio"
+        aria-label="Custom radio button 1"
+      />
+      <label for="customRadio1" class="radiomark"></label>
+    </div>
+    <div class="radio-container">
+      <input
+        type="radio"
+        id="customRadio2"
+        name="customRadio"
+        class="radio"
+        aria-label="Custom radio button 2"
+      />
+      <label for="customRadio2" class="radiomark"></label>
+    </div>
+
+    <br />
+    <br />
+    TOGGLE
+    <label class="switch" aria-label="Toggle">
+      <input type="checkbox" checked />
+      <span class="slider round"></span>
+    </label>
+  </body>
+</html>
