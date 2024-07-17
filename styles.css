@@ -1,9 +1,13 @@
-.checkbox-container {
-  display: inline-block;
-  position: relative;
+.checkbox-container,
+.radio-container,
+.switch {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.checkbox {
+.checkbox,
+.radio {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -40,18 +44,6 @@
   display: block;
 }
 
-.radio-container {
-  display: inline-block;
-  position: relative;
-  margin-right: 10px;
-}
-
-.radio {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
 .radiomark {
   display: inline-block;
   width: 25px;
@@ -61,6 +53,7 @@
   transition: background-color 400ms ease, transform 400ms ease;
   position: relative;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .radio:checked + .radiomark {
@@ -104,8 +97,8 @@
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  transition: 400ms;
+  border-radius: 34px;
 }
 
 .slider:before {
@@ -115,30 +108,15 @@
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  background-color: grey;
+  transition: 400ms;
+  border-radius: 50%;
 }
 
 input:checked + .slider {
   background-color: #536bea;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #536bea;
-}
-
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
   transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
 }
