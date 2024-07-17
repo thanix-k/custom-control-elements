@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col justify-center items-center">
+    
+    <label for="checkbox" class="flex items-center mt-10">
+        <input type="checkbox" id="checkbox" name="checkbox" value="checkbox"
+            class="appearance-none cursor-pointer hrink-0 checked:bg-purple-500 h-5 w-5 rounded-md border border-custom-grey border-solid checked:bg-checked checked:border-none checked:bg-purple-500">
+            <span class="ml-2">Check Box</span>
+    </label>
+
+    <fieldset class="mt-10 p-10 w-fit rounded-md border border-custom-grey border-solid">
+        <legend>Select a radio:</legend>
+        <label for="radio-true" class="flex items-center">
+            <input type="radio" id="radio-true" name="radio" value="true"
+                class="appearance-none cursor-pointer shrink-0 h-5 w-5 rounded-full border border-custom-grey border-solid checked:border-none checked:border-6 checked:border-purple-500 checked:border-solid" checked>
+            <span class="ml-2">True</span>
+        </label>
+
+        <label for="radio-false" class="flex items-center mt-10">
+            <input type="radio" id="radio-false" name="radio" value="false"
+                class="appearance-none cursor-pointer shrink-0 h-5 w-5 rounded-full border border-custom-grey border-solid checked:border-none checked:border-6 checked:border-purple-500 checked:border-solid">
+            <span class="ml-2">False</span>
+        </label>
+    
+    </fieldset>
+
+    <label class="mt-10 flex items-center">
+        <div class="w-10 h-6 rounded-4xl position-relative shrink-0">
+            <input type="checkbox"
+                class="appearance-none cursor-pointer w-full h-full rounded-4xl bg-custom-grey checked:bg-purple-500 checked:switch-toggle"
+                value="switch">
+            <span
+                class="switch cursor-pointer h-6 w-6 bg-white border border-solid border-custom-grey rounded-full position-absolute top-0 left-0"></span>
+        </div>
+        <span class="ml-2">Switch</span>
+        
+    </label>
+    
+</body>
+</html>
