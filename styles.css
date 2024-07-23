@@ -1,0 +1,94 @@
+:root {
+    --color-input-true-state: #556AEB;
+}
+
+body {
+   background-color: lightgrey;
+   accent-color: var(--color-input-true-state);
+}
+
+.container {
+    max-width: 1160px;
+    margin: auto;
+    background-color: white;
+}
+
+.control-element-container {
+    padding: 20px;
+}
+
+.control-element-name {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.control-element {
+    padding: 20px;
+}
+
+.checkmark {
+    opacity: 0;
+    display: inline-block;
+}
+
+.checkmark + label {
+    position: relative;
+    display: inline-block;
+    line-height: 24px;
+    padding-left: 30px;
+}
+
+.checkmark + label::before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    outline: 1px solid #ADB5BD;
+    border-radius: 4px;
+    left: 0px;
+    top: 0px;
+}
+
+.checkmark:checked + label::before {
+    display: none;
+}
+
+.checkmark:checked + label::after {
+    
+}
+
+
+
+
+.checkmark .sm {
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    outline: 1px solid #ADB5BD;
+}
+
+.checkmark .md {
+    height: 20px;
+    width: 20px;
+    border: 1px #ADB5BD;
+    border-radius: 4px;
+}
+
+.radio {
+
+}
+
+.radio .md {
+
+}
+
+.toggle {
+
+}
+
+.toggle .md{
+
+}
