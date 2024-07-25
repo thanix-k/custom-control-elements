@@ -1,5 +1,6 @@
 :root {
     --color-input-true-state: #556AEB;
+    --color-input-false-state: #ADB5BD;
 }
 
 body {
@@ -29,66 +30,218 @@ body {
     padding: 20px;
 }
 
+
+/* checkmark sm md */
 .checkmark {
     opacity: 0;
-    display: inline-block;
+    width: 0px;
+    height: 0px;
 }
 
-.checkmark + label {
+.checkmark-label {
     position: relative;
     display: inline-block;
     line-height: 24px;
     padding-left: 30px;
 }
 
-.checkmark + label::before {
+.checkmark-label::before {
     content: "";
     position: absolute;
+    outline: 1px solid var(--color-input-false-state);
+    border-radius: 4px;
+}
+
+.checkmark:checked + .checkmark-label::before {
+    content: "";
+    position: absolute;
+    outline: 1px solid var(--color-input-true-state);
+    border-radius: 4px;
+    background-color: var(--color-input-true-state);
+}
+
+.checkmark + .checkmark-label::after {
+    content: "";
+    position: absolute;
+    border-radius: 4px;
+    background: url(./icons/checkbox-tick.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(0);
+}
+
+.checkmark:checked + .checkmark-label::after {
+    content: "";
+    position: absolute;
+    border-radius: 4px;
+    background: url(./icons/checkbox-tick.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(1);
+    transition: all 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.checkmark-label.sm::after {
     height: 16px;
     width: 16px;
-    outline: 1px solid #ADB5BD;
-    border-radius: 4px;
     left: 0px;
-    top: 0px;
+    top: 3px;
 }
 
-.checkmark:checked + label::before {
-    display: none;
-}
-
-.checkmark:checked + label::after {
-    
-}
-
-
-
-
-.checkmark .sm {
+.checkmark-label.sm::before {
     height: 16px;
     width: 16px;
-    border-radius: 4px;
-    outline: 1px solid #ADB5BD;
+    left: 0px;
+    top: 3px;
 }
 
-.checkmark .md {
+.checkmark-label.md::after {
     height: 20px;
     width: 20px;
-    border: 1px #ADB5BD;
-    border-radius: 4px;
+    left: 0px;
+    top: 1px;
 }
 
+.checkmark-label.md::before {
+    height: 20px;
+    width: 20px;
+    left: 0px;
+    top: 1px;
+}
+
+
+/* radio md */
 .radio {
-
+    opacity: 0;
+    width: 0px;
+    height: 0px;
 }
 
-.radio .md {
-
+.radio-label {
+    position: relative;
+    display: inline-block;
+    line-height: 24px;
+    padding-left: 30px;
 }
+
+.radio:not(:checked) + .radio-label::before {
+    content: "";
+    outline: 1px solid var(--color-input-false-state);
+    border-radius: 50%;
+    position: absolute;
+    transition: 0.4s;
+}
+
+.radio:checked + .radio-label::before {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    background-color: var(--color-input-true-state);
+    transition: 0.4s;
+}
+
+.radio:checked + .radio-label::after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    transform: scale(.4);
+}
+
+.radio-label.sm::after {
+    height: 16px;
+    width: 16px;
+    left: 0px;
+    top: 3px;
+}
+
+.radio-label.sm::before {
+    height: 16px;
+    width: 16px;
+    left: 0px;
+    top: 3px;
+}
+
+.radio-label.md::after {
+    height: 20px;
+    width: 20px;
+    left: 0px;
+    top: 1px;
+}
+
+.radio-label.md::before {
+    height: 20px;
+    width: 20px;
+    left: 0px;
+    top: 1px;
+}
+
+/* toggle md */
 
 .toggle {
-
+    opacity: 0;
+    height: 0px;
+    width: 0px;
 }
 
-.toggle .md{
-
+.toggle-label {
+    position: relative;
+    display: inline-block;
+    line-height: 24px;
+    padding-left: 50px;
 }
+
+.toggle:not(:checked) + .toggle-label::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 24px;
+    width: 39px;
+    border-radius: 100px;
+    background-color:var(--color-input-false-state);
+    transition: 0.4s;
+}
+
+.toggle:checked + .toggle-label::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 100px;
+    background-color: var(--color-input-true-state);
+    transition: 0.4s;
+}
+
+.toggle:not(:checked) + .toggle-label::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 1.5px solid var(--color-input-false-state);
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.4s;
+}
+
+.toggle:checked + .toggle-label::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    border: 1.5px solid var(--color-input-true-state);
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.4s;
+}
+
+.toggle-label.md::after {
+    height: 24px;
+    width: 24px;
+}
+
+.toggle-label.md::before {
+    height: 24px;
+    width: 39px;
+}
+
