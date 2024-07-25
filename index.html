@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Custom Controls</title>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="control-element-container">
+            <div class="control-element-name">CHECKMARK Small</div>
+            <div class="control-element">
+                <input type="checkbox" class="checkmark" id="notify-checkbox-sm"/>
+                <label for="notify-checkbox-sm" class="checkmark-label sm">Notify</label>
+            </div>
+        </div>
+        <div class="control-element-container">
+            <div class="control-element-name">CHECKMARK Medium</div>
+            <div class="control-element">
+                <input type="checkbox" id="notify-checkbox-md" class="checkmark">
+                <label for="notify-checkbox-md" class="checkmark-label md">Notify</label>
+            </div>
+        </div>
+        <div class="control-element-container">
+            <div class="control-element-name">RADIO BUTTON Medium</div>
+            <div class="control-element">
+               <fieldset style="width: fit-content;">
+                <legend>Notifications</legend>
+                <input type="radio" id="notify-radio-on" class="radio" name="notify" value="1"/>
+                <label for="notify-radio-on" class="radio-label md">on</label>
+                <input type="radio" id="notify-radio-off" class="radio" name="notify" value="2"/>
+                <label for="notify-radio-off" class="radio-label md">off</label>
+               </fieldset>
+            </div>
+        </div>
+        <div class="control-element-container">
+            <div class="control-element-name">TOGGLE medium</div>
+            <div class="control-element">
+                <input type="checkbox" id="notify-toggle" class="toggle"/>
+                <label for="notify-toggle" class="toggle-label md">Notify</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
